@@ -14,4 +14,3 @@ tokens=nltk.word_tokenize(texto,"spanish")
 riqueza_lexica=riqueza_lexica(tokens)
 print(riqueza_lexica)
 
-#Comentario
