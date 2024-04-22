@@ -1,6 +1,7 @@
 import docx
 import nltk
 from nltk.tokenize import word_tokenize
+import os
 
 # Función para contar palabras y líneas en un texto
 def contar_palabras_lineas(texto):
@@ -21,6 +22,11 @@ def guardar_texto(texto, nombre_archivo):
 
 # Función principal
 def analizar_documento(docx_file, palabra):
+    # Validar si el archivo DOCX existe
+    if not os.path.exists(docx_file):
+        print(f"El archivo {docx_file} no existe.")
+        return
+
     doc = docx.Document(docx_file)
     texto_pagina = ""
     for paragraph in doc.paragraphs:
@@ -73,3 +79,4 @@ def analizar_documento(docx_file, palabra):
 documento_word = "word.docx"
 palabra_buscada = "dengue"
 analizar_documento(documento_word, palabra_buscada)
+
