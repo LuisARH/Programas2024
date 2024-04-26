@@ -21,11 +21,16 @@ def guardar_texto(texto, nombre_archivo):
         archivo.write(texto)
 
 # Función principal
-def analizar_documento(docx_file, palabra):
+def analizar_documento():
+    # Solicitar al usuario el nombre del archivo
+    docx_file = input("Por favor, ingresa el nombre del archivo DOCX que quieres analizar: ")
+
     # Validar si el archivo DOCX existe
     if not os.path.exists(docx_file):
         print(f"El archivo {docx_file} no existe.")
         return
+
+    palabra = input("Por favor, ingresa la palabra que quieres buscar en el documento: ")
 
     doc = docx.Document(docx_file)
     texto_pagina = ""
@@ -60,7 +65,7 @@ def analizar_documento(docx_file, palabra):
     print("----------------------------------------------------------------------")
 
     # Tokenizar el texto y eliminar palabras funcionales
-    tokens = word_tokenize(texto, "spanish")
+    tokens = word_tokenize(texto)
     tokens_limpios = [token for token in tokens if token.lower() not in palabras_funcionales]
 
     # Imprimir algunos detalles sobre los tokens
@@ -75,8 +80,5 @@ def analizar_documento(docx_file, palabra):
     # Graficar las 20 palabras más comunes
     distribucion_limpia.plot(20)
 
-# Ejemplo de uso
-documento_word = "word.docx"
-palabra_buscada = "dengue"
-analizar_documento(documento_word, palabra_buscada)
-
+# Ejecutar la función principal
+analizar_documento()

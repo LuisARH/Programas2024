@@ -1,7 +1,0 @@
-En esta actividad, llevamos a cabo un análisis exhaustivo de un conjunto de datos relacionados con casos de dengue utilizando Python y la biblioteca Pandas. Comenzamos por cargar los datos y realizar una exploración inicial para entender su estructura y contenido. Identificamos variables categóricas y numéricas, así como manejamos los datos faltantes para garantizar la integridad de nuestro análisis.
-
-A través de medidas de tendencia central, como la media, la mediana y la desviación estándar, pudimos obtener una comprensión más profunda de la distribución de los datos numéricos en el conjunto de datos. Esto nos permitió identificar patrones y posibles puntos de interés para un análisis más detallado.
-
-Además, al contar el número de casos por categoría para cada variable categórica, pudimos obtener información relevante sobre la distribución de los casos de dengue en diferentes grupos demográficos y geográficos. Este análisis nos ayudó a comprender mejor cómo afecta la enfermedad a diferentes poblaciones y regiones.
-
-Finalmente, mediante la visualización de los datos, pudimos representar gráficamente la distribución de casos de dengue a lo largo del tiempo, lo que nos permitió identificar tendencias y patrones estacionales en la incidencia de la enfermedad. Esta visualización proporciona una herramienta poderosa para la interpretación rápida y efectiva de los datos, lo que puede ayudar en la toma de decisiones y la planificación de intervenciones para la prevención y control del dengue.
